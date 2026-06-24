@@ -1,0 +1,47 @@
+services:
+  front-end:
+    image: ghcr.io/voncerbau/portfolio-chat-front:v0.1
+    container_name: portfolio-chat-front
+    environment:
+      - API_DATA_URL=http://back-end:${BACK_END_PORT}
+    ports:
+      - ${FRONT_END_PORT}:${FRONT_END_PORT}
+    networks:
+      - portfolio-chat
+    depends_on:
+      - back-end
+    restart: unless-stopped
+
+  back-end:
+    image: ghcr.io/voncerbau/full-stack-chat-back:v0.1
+    container_name: portfolio-chat-back
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=data
+      - DB_PORT=${DB_PORT}
+      - CORS_ORIGIN=http://front-end:${FRONT_END_PORT}
+    ports:
+      - ${BACK_END_PORT}:${BACK_END_PORT}
+    networks:
+      - portfolio-chat
+    depends_on:
+      - data
+    restart: unless-stopped
+
+  data:
+    image: ghcr.io/voncerbau/full-stack-chat-data:v0.1
+    container_name: portfolio-chat-data
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    networks:
+      - portfolio-chat
+    restart: unless-stopped
+
+networks:
+  portfolio-chat:
+    driver: bridge
