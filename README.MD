@@ -94,7 +94,7 @@ docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
 
 ## Contacto
 
-<table>
+<table border="0">
   <tr>
     <td>
       <img src="https://api.qrserver.com/v1/create-qr-code/?data=gravatar.com/dantecervantesb.card&size=128x128" width="128" alt="Mi QR">
