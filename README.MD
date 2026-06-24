@@ -94,10 +94,13 @@ docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
 
 ## Contacto
 
-<table border="0">
+<table>
   <tr>
     <td>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=gravatar.com/dantecervantesb.card&size=128x128" width="128" alt="Mi QR">
+      <img src="https://0.gravatar.com/avatar/7ae859a4348cf43f91edb2cbbfe7be7077c8ac85f05dfc0525086aa76486e40d?size=512" width="128" alt="Mi QR">
+    </td>
+    <td>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://gravatar.com/dantecervantesb&size=512x512" width="128" alt="Mi QR">
     </td>
     <td>
       <strong>Dante Cervantes</strong><br>
