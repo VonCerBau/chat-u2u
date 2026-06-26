@@ -111,7 +111,7 @@ docker pull ghcr.io/voncerbau/portfolio-chat-back:v0.1
       <strong>Dante Cervantes</strong><br>
       <sub>Software Engineer</sub><br>
        • 
-      <a href="https://github.com/dantecervantesb">GitHub</a> • 
+      <a href="https://github.com/voncerbau">GitHub</a> • 
       <a href="https://linkedin.com/in/dantecervantesb">LinkedIn</a> • 
       <br>
       dante.cervantes.b@gmail.com
