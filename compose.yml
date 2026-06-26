@@ -1,26 +1,33 @@
 services:
-  app-dev:
+  api-router:
+    image: nginx:alpine
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app-prod
+      - api-prod
+    networks:
+      - portfolio-chat
+    restart: unless-stopped
+
+  app-prod:
     image: ghcr.io/voncerbau/portfolio-chat-front:v0.1
     environment:
-      - API_DATA_URL=http://api-dev:${BACK_END_PORT}
-    ports:
-      - ${FRONT_END_PORT}:${FRONT_END_PORT}
+      - VITE_API_DATA_URL=http://localhost:3000/api
+      - VITE_CONNECT_ATTEMPTS=5
+      - PRODUCTION_PORT=3300
     networks:
       - portfolio-chat
     depends_on:
-      - api-dev
+      - api-prod
     restart: unless-stopped
 
-  api-dev:
-    image: ghcr.io/voncerbau/full-stack-chat-back:v0.1
+  api-prod:
+    image: ghcr.io/voncerbau/portfolio-chat-back:v0.1
     environment:
-      - DB_USER=${DB_USER}
-      - DB_PASS=${DB_PASS}
-      - DB_HOST=api-data
-      - DB_PORT=${DB_PORT}
-      - CORS_ORIGIN=http://app-dev:${FRONT_END_PORT}
-    ports:
-      - ${BACK_END_PORT}:${BACK_END_PORT}
+      - MONGODB_URI=mongodb://mongoadmin:mongopass@api-data:27017/full-chat-db?authSource=admin
     networks:
       - portfolio-chat
     depends_on:
@@ -28,13 +35,11 @@ services:
     restart: unless-stopped
 
   api-data:
-    image: ghcr.io/voncerbau/full-stack-chat-data:v0.1
+    image: mongo:latest
     environment:
-      - DB_USER=${DB_USER}
-      - DB_PASS=${DB_PASS}
-      - DB_NAME=${DB_NAME}
-    ports:
-      - ${DB_PORT}:${DB_PORT}
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=mongopass
+      - MONGO_INITDB_DATABASE=full-chat-db
     networks:
       - portfolio-chat
     restart: unless-stopped

@@ -15,6 +15,12 @@
 docker compose up -d
 ```
 
+### Access
+
+```bash
+http://localhost:3000
+```
+
 ### Stop
 
 ```bash
@@ -24,9 +30,9 @@ docker compose down
 ### Pull from Github Packages
 
 ```bash
-docker pull ghcr.io/voncerbau/full-stack-chat-front:v0.1
-docker pull ghcr.io/voncerbau/full-stack-chat-back:v0.1
-docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
+docker pull ghcr.io/voncerbau/portfolio-chat-front:v0.1
+docker pull ghcr.io/voncerbau/portfolio-chat-back:v0.1
+docker pull ghcr.io/voncerbau/portfolio-chat-data:v0.1
 ```
 
 ## Captures
@@ -45,9 +51,9 @@ docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
       <strong><i>Frontend</i></strong>
     </td>
     <td>
-      React, Redux, Bootstrap, TypeScript, Vite
+      React, Vite, Redux, TypeScript, Bootstrap
       <br>
-      <img src="https://skillicons.dev/icons?i=react,redux,bootstrap,typescript,vite" height="50" alt="Frontend-skills-react">
+      <img src="https://skillicons.dev/icons?i=react,vite,redux,typescript,bootstrap" height="50" alt="Frontend-skills-react">
     </td>
   </tr>
   <tr>
@@ -75,9 +81,9 @@ docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
       <strong><i>Database</i></strong>
     </td>
     <td>
-      MongoDB, PostgreSQL
+      MongoDB, JSON
       <br>
-      <img src="https://skillicons.dev/icons?i=mongodb,postgresql" height="50" alt="Database-skills-mongodb">
+      <img src="https://skillicons.dev/icons?i=mongodb,js" height="50" alt="Database-skills-mongodb">
     </td>
   </tr>
   <tr>
@@ -85,22 +91,22 @@ docker pull ghcr.io/voncerbau/full-stack-chat-data:v0.1
       <strong><i>Deployment</i></strong>
     </td>
     <td>
-      Docker, GitHub
+      Docker, GitHub, 
       <br>
-      <img src="https://skillicons.dev/icons?i=docker,github" height="50" alt="Deployment-skills-docker">
+      <img src="https://skillicons.dev/icons?i=docker,github,eslint" height="50" alt="Deployment-skills-docker">
     </td>
   </tr>
 </table>
 
-## Contacto
+## Contact info
 
 <table>
   <tr>
     <td>
-      <img src="https://0.gravatar.com/avatar/7ae859a4348cf43f91edb2cbbfe7be7077c8ac85f05dfc0525086aa76486e40d?size=512" width="128" alt="Mi QR">
+      <img src="https://0.gravatar.com/avatar/7ae859a4348cf43f91edb2cbbfe7be7077c8ac85f05dfc0525086aa76486e40d?size=512" width="128" alt="my-photo">
     </td>
     <td>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://gravatar.com/dantecervantesb&size=512x512" width="128" alt="Mi QR">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://gravatar.com/dantecervantesb&size=512x512" width="128" alt="my-website-qr">
     </td>
     <td>
       <strong>Dante Cervantes</strong><br>
