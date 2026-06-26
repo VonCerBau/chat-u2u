@@ -29,15 +29,29 @@ docker compose down
 
 ## Captures
 
-![Frontend-1](/captures/signin.png)
-
-![Frontend-2](/captures/login.png)
-
-![Frontend-3](/captures/add.png)
-
-![Frontend-4](/captures/message.png)
-
-![Frontend-5](/captures/message-2.png)
+<table>
+  <tr>
+    <td>
+      <img src="./captures/signin.png" width="512" alt="signin">
+    </td>
+    <td>
+      <img src="./captures/login.png" width="512" alt="login">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="./captures/add.png" width="512" alt="add">
+    </td>
+    <td>
+      <img src="./captures/message.png" width="512" alt="message">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="./captures/message-2.png" width="512" alt="message-2">
+    </td>
+  </tr>
+</table>
 
 ## Tech Stack
 
