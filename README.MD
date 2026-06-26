@@ -36,11 +36,15 @@ docker pull ghcr.io/voncerbau/portfolio-chat-back:v0.1
 
 ## Captures
 
-![Frontend-1](/captures/frontend-1.png)
+![Frontend-1](/captures/signin.png)
 
-![Frontend-2](/captures/frontend-2.png)
+![Frontend-2](/captures/login.png)
 
-![Frontend-3](/captures/frontend-3.png)
+![Frontend-3](/captures/add.png)
+
+![Frontend-4](/captures/message.png)
+
+![Frontend-5](/captures/message-2.png)
 
 ## Tech Stack
 
