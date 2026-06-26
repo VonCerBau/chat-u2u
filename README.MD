@@ -32,7 +32,6 @@ docker compose down
 ```bash
 docker pull ghcr.io/voncerbau/portfolio-chat-front:v0.1
 docker pull ghcr.io/voncerbau/portfolio-chat-back:v0.1
-docker pull ghcr.io/voncerbau/portfolio-chat-data:v0.1
 ```
 
 ## Captures
