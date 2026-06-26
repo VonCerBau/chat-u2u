@@ -27,13 +27,6 @@ http://localhost:3000
 docker compose down
 ```
 
-### Pull from Github Packages
-
-```bash
-docker pull ghcr.io/voncerbau/portfolio-chat-front:v0.1
-docker pull ghcr.io/voncerbau/portfolio-chat-back:v0.1
-```
-
 ## Captures
 
 ![Frontend-1](/captures/signin.png)
